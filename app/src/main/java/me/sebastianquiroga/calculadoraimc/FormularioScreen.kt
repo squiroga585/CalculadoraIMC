@@ -26,7 +26,7 @@ fun FormularioScreen(
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // La View solo MUESTRA el estado y ENVÍA eventos al ViewModel
+
         OutlinedTextField(
             value = viewModel.peso,
             onValueChange = { viewModel.onPesoChange(it) },
@@ -45,7 +45,7 @@ fun FormularioScreen(
             singleLine = true
         )
 
-        // Estado de error: aparece solo si el ViewModel lo llena
+
         if (viewModel.error.isNotEmpty()) {
             Spacer(modifier = Modifier.height(8.dp))
             Text(viewModel.error, color = MaterialTheme.colorScheme.error)

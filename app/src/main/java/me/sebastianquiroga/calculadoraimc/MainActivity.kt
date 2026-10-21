@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
 fun AppNavegacion() {
     val navController = rememberNavController()
 
-    // UN SOLO ViewModel, compartido por las dos pantallas
+
     val viewModel: ImcViewModel = viewModel()
 
     NavHost(navController = navController, startDestination = "formulario") {

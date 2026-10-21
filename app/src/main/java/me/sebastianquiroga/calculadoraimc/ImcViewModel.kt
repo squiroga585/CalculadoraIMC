@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 
 class ImcViewModel : ViewModel() {
 
-    // ESTADOS: Compose los observa y redibuja la UI cuando cambian
+
     var peso by mutableStateOf("")
         private set
 
@@ -23,7 +23,7 @@ class ImcViewModel : ViewModel() {
     var error by mutableStateOf("")
         private set
 
-    // EVENTOS: la View los llama, el ViewModel actualiza el estado
+
     fun onPesoChange(nuevo: String) {
         peso = nuevo
     }
@@ -32,7 +32,7 @@ class ImcViewModel : ViewModel() {
         altura = nuevo
     }
 
-    // Devuelve true si el cálculo fue exitoso
+
     fun calcular(): Boolean {
         val p = peso.toFloatOrNull()
         val a = altura.toFloatOrNull()
@@ -43,7 +43,7 @@ class ImcViewModel : ViewModel() {
         }
 
         error = ""
-        val metros = a / 100f          // la altura se ingresa en cm
+        val metros = a / 100f
         val resultado = p / (metros * metros)
         imc = resultado
 
